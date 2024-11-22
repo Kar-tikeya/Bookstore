@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Genres - Bookworm Heaven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .genre-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .genre-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .genre-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .genre-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .genre-card .genre-info {
+            padding: 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .genre-card .genre-info h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .genre-card .genre-info p {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .genre-card .genre-info button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .genre-card .genre-info button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .genre-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Explore Book Genres</h1>
+        <div class="genre-grid">
+            <!-- Genre 1: Fiction -->
+            <div class="genre-card">
+                <img src="https://via.placeholder.com/400x200?text=Fiction" alt="Fiction Genre">
+                <div class="genre-info">
+                    <h3>Fiction</h3>
+                    <p>Fiction books create imaginative stories, often in a variety of subgenres like historical, fantasy, and more.</p>
+                    <button onclick="location.href='#fiction'">Explore Fiction</button>
+                </div>
+            </div>
+
+            <!-- Genre 2: Nonfiction -->
+            <div class="genre-card">
+                <img src="https://via.placeholder.com/400x200?text=Nonfiction" alt="Nonfiction Genre">
+                <div class="genre-info">
+                    <h3>Nonfiction</h3>
+                    <p>Nonfiction books are based on factual information, covering topics like biography, history, and more.</p>
+                    <button onclick="location.href='#nonfiction'">Explore Nonfiction</button>
+                </div>
+            </div>
+
+            <!-- Genre 3: Poetry -->
+            <div class="genre-card">
+                <img src="https://via.placeholder.com/400x200?text=Poetry" alt="Poetry Genre">
+                <div class="genre-info">
+                    <h3>Poetry</h3>
+                    <p>Poetry is a form of literary expression using rhythmic and often metaphorical language.</p>
+                    <button onclick="location.href='#poetry'">Explore Poetry</button>
+                </div>
+            </div>
+
+            <!-- Genre 4: Fantasy -->
+            <div class="genre-card">
+                <img src="https://via.placeholder.com/400x200?text=Fantasy" alt="Fantasy Genre">
+                <div class="genre-info">
+                    <h3>Fantasy</h3>
+                    <p>Fantasy books contain magical elements, often set in imaginary worlds with mystical creatures and heroes.</p>
+                    <button onclick="location.href='#fantasy'">Explore Fantasy</button>
+                </div>
+            </div>
+
+            <!-- Genre 5: Romance -->
+            <div class="genre-card">
+                <img src="https://via.placeholder.com/400x200?text=Romance" alt="Romance Genre">
+                <div class="genre-info">
+                    <h3>Romance</h3>
+                    <p>Romance books explore relationships and love, often with an emotional, heartfelt storyline.</p>
+                    <button onclick="location.href='#romance'">Explore Romance</button>
+                </div>
+            </div>
+
+            <!-- Genre 6: Mystery -->
+            <div class="genre-card">
+                <img src="https://via.placeholder.com/400x200?text=Mystery" alt="Mystery Genre">
+                <div class="genre-info">
+                    <h3>Mystery</h3>
+                    <p>Mystery books center around solving a crime, puzzle, or an enigma, often with a detective or investigator.</p>
+                    <button onclick="location.href='#mystery'">Explore Mystery</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

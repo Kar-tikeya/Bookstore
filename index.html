@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <title>Bookworm Heaven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f9f9f9 0%, #ece9e6 100%); /* Original background */
+            line-height: 1.6;
+        }
+
+        /* Header Styling */
+        header {
+            display: flex;
+            flex-direction: column;  /* Stack elements vertically */
+            align-items: center;  /* Center all elements in the header */
+            justify-content: center;  /* Center content vertically */
+            background: linear-gradient(135deg, #2c2c2c, #8d8d8d); /* Shiny dark silverish black */
+            background-size: 400% 400%;
+            animation: gradient-shift 15s ease infinite;
+            color: white;
+            padding: 40px 40px;
+            text-align: center;  /* Center the text */
+            border-bottom: 5px solid #8d8d8d; /* Silver border */
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6); /* Strong shadow for premium feel */
+            width: 100%;
+        }
+
+        /* Logo Styling */
+        header .logo {
+            width: 200px;  /* Increased logo size */
+            height: auto;
+            margin-bottom: 20px;  /* Added space between logo and brand name */
+        }
+
+        /* Header Title Styling */
+        header h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            letter-spacing: 5px;
+            color: #ffffff;
+            text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.8); /* Deeper shadow */
+            display: flex;
+            align-items: center;  /* Align logo and text vertically */
+            justify-content: center;  /* Center the brand name */
+            margin-bottom: 20px; /* Space between brand name and nav buttons */
+        }
+
+        /* Gradient animation for the header background */
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Navbar Styling */
+        .nav-buttons ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;  /* Center the navigation buttons */
+            margin-top: 0;
+            width: 100%;
+        }
+
+        .nav-buttons ul li {
+            margin-right: 20px;
+        }
+
+        .nav-buttons ul li:last-child {
+            margin-right: 0;
+        }
+
+        .nav-buttons ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 12px 24px;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #2c2c2c, #8d8d8d); /* Shiny dark silverish black */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .nav-buttons ul li a:hover {
+            background: linear-gradient(135deg, #8d8d8d, #2c2c2c); /* Reverse gradient for hover effect */
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Main Content Section */
+        .main {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Blog Section */
+        .blogs {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* Updated to accommodate 5 blogs */
+            gap: 20px;
+        }
+
+        .blog-post {
+            background: linear-gradient(135deg, #ffffff, #f1f1f1);
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .blog-post img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .blog-post h3 {
+            font-size: 1.6rem;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .blog-post p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .blog-post a {
+            display: inline-block;
+            padding: 10px 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            background: linear-gradient(135deg, #007BFF, #0056b3);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .blog-post a:hover {
+            background: linear-gradient(135deg, #004494, #007BFF);
+            transform: translateY(-5px);
+        }
+
+        /* Footer Styling */
+        footer {
+            background: linear-gradient(135deg, #333, #444);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <img src="logo.png" alt="Bookworm Heaven Logo" class="logo"> <!-- Logo attached to the brand name -->
+            <h1>Bookworm Heaven</h1> <!-- Brand name with only "B" and "W" capitalized -->
+        </div>
+
+        <nav class="nav-buttons">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="genres.html">Genres</a></li>
+                <li><a href="follow-us.html">Follow Us</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="main">
+        <h2>Latest Blogs About Books</h2>
+        <section class="blogs">
+            <!-- Blog 1 -->
+            <article class="blog-post">
+                <img src="most awrd.jpg" alt="Most Awarded Books">
+                <h3>Most Awarded Books</h3>
+                <p>Discover the books that have earned accolades worldwide. Dive into award-winning stories that will leave you amazed.</p>
+                <a href="#most-awarded">Read More</a>
+            </article>
+
+            <!-- Blog 2 -->
+            <article class="blog-post">
+                <img src="reading.jpg" alt="Benefits of Reading">
+                <h3>Benefits of Reading</h3>
+                <p>From reducing stress to expanding your vocabulary, learn how reading can transform your life in unexpected ways.</p>
+                <a href="#benefits-of-reading">Read More</a>
+            </article>
+
+            <!-- Blog 3 -->
+            <article class="blog-post">
+                <img src="genres.jpg" alt="Exploring Different Book Genres">
+                <h3>Exploring Different Book Genres</h3>
+                <p>Step into a world of adventure as we explore the many genres of books that cater to every reader's taste, from fiction to non-fiction.</p>
+                <a href="#exploring-genres">Read More</a>
+            </article>
+
+            <!-- Blog 4 -->
+            <article class="blog-post">
+                <img src="delema.jpg" alt="Top Fictional Worlds">
+                <h3>Top Fictional Worlds</h3>
+                <p>Explore some of the most imaginative and captivating fictional worlds created by authors. Get lost in these fictional universes.</p>
+                <a href="#fictional-worlds">Read More</a>
+            </article>
+
+            <!-- Blog 5 -->
+            <article class="blog-post">
+                <img src="reviews (1).jpg" alt="Reader Reviews and Testimonials">
+                <h3>Reader Reviews and Testimonials</h3>
+                <p>Hear from our community of readers as they share their thoughts on the latest books they've read and their experiences with literature.</p>
+                <a href="#reader-reviews">Read More</a>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Bookworm Heaven. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

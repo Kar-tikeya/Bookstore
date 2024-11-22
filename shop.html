@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Bookworm Heaven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .shop-container {
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .filter-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .filter-container select {
+            padding: 10px 15px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #ffffff;
+            color: #2c3e50;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .filter-container select:hover {
+            transform: scale(1.05);
+        }
+
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .book-card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .book-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .book-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-bottom: 4px solid #f0f0f0;
+        }
+
+        .book-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .book-info h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #34495e;
+            margin-bottom: 10px;
+        }
+
+        .book-info p {
+            font-size: 1rem;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+
+        .buy-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #e74c3c;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .buy-btn:hover {
+            background-color: #c0392b;
+            transform: scale(1.1);
+        }
+
+        .book-card .hover-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(44, 62, 80, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: #fff;
+            border-radius: 15px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .book-card:hover .hover-overlay {
+            opacity: 1;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+
+        footer a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="shop-container">
+        <h1>Shop Your Favorite Books</h1>
+
+        <!-- Filter Section -->
+        <div class="filter-container">
+            <select>
+                <option value="">Select Genre</option>
+                <option value="fiction">Fiction</option>
+                <option value="non-fiction">Non-Fiction</option>
+                <option value="poetry">Poetry</option>
+            </select>
+        </div>
+
+        <!-- Books Grid -->
+        <div class="books-grid">
+
+            <!-- Book Card 1 -->
+            <div class="book-card">
+                <div class="book-image">
+                    <img src="adventure.jpg" alt="Book Cover">
+                </div>
+                <div class="book-info">
+                    <h3>The Great Adventure</h3>
+                    <p>An epic tale of mystery, courage, and unforgettable moments.</p>
+                    <a href="#" class="buy-btn">Buy Now</a>
+                </div>
+                <div class="hover-overlay">
+                    Discover more about this thrilling adventure!
+                </div>
+            </div>
+
+            <!-- Book Card 2 -->
+            <div class="book-card">
+                <div class="book-image">
+                    <img src="shadow.jpg" alt="Book Cover">
+                </div>
+                <div class="book-info">
+                    <h3>Shadows of the Past</h3>
+                    <p>Unlock hidden secrets and explore a world of historical intrigue.</p>
+                    <a href="#" class="buy-btn">Buy Now</a>
+                </div>
+                <div class="hover-overlay">
+                    Step into history with this gripping tale.
+                </div>
+            </div>
+
+            <!-- Book Card 3 -->
+            <div class="book-card">
+                <div class="book-image">
+                    <img src="art of living.jpg" alt="Book Cover">
+                </div>
+                <div class="book-info">
+                    <h3>The Art of Living</h3>
+                    <p>Inspire your life with this transformative self-help guide.</p>
+                    <a href="#" class="buy-btn">Buy Now</a>
+                </div>
+                <div class="hover-overlay">
+                    Start your journey of self-discovery today.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 <a href="#">Bookworm Heaven</a>. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
